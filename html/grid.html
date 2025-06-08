@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>grid</title>
+    <link rel="stylesheet" href="../grid.css" />
+    <style>
+      @media (min-width: 1024px) {
+        .grid-container {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      /* Laptop and above */
+      @media (min-width: 1280px) {
+        .grid-container {
+          grid-template-columns: repeat(4, 1fr);
+        }
+      }
+      @media (max-width: 768px) {
+        body {
+          margin: 0;
+          overflow-y: auto;
+          scroll-snap-type: y mandatory;
+          height: 100vh;
+        }
+
+        .grid-container {
+          display: grid;
+          grid-template-columns: 1fr;
+          grid-auto-rows: 100vh; /* Each image fills the screen */
+          gap: 0;
+          padding: 0;
+        }
+
+        .grid-container > div {
+          all: unset; /* Removes grid span classes */
+          scroll-snap-align: start;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+        }
+
+        .grid-container img {
+          width: 100%;
+          height: auto;
+          max-height: 100vh;
+          object-fit: contain;
+          border-radius: 10px solid black;
+          box-shadow: none;
+        }
+      }
+
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        text-align: center;
+      }
+      h1 {
+        color: #d10075;
+        padding: 20px;
+        height: 100px;
+      }
+
+      .grid-container {
+        display: grid;
+        gap: 10px;
+        padding: 20px;
+        margin: auto;
+        width: 100%;
+      }
+
+      .grid-container img {
+        width: 100%;
+        height: 100%;
+        border-radius: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+      .grid-container img:hover {
+        transform: scale(1.1, 1.1);
+      }
+
+      .grid1 {
+        grid-column: 1;
+      }
+      .grid2 {
+        height: 100%;
+        grid-column: 2;
+        grid-row: 1 / span 2;
+      }
+      .grid5 {
+        grid-column: 1;
+        grid-row: 2;
+      }
+      .grid4 {
+        grid-column: 4;
+        grid-row: 1;
+      }
+      .grid6 {
+        grid-column: 3;
+      }
+      .grid9 {
+        grid-column: 4;
+        grid-row: 2;
+      }
+
+      .grid11 {
+        grid-column: 2;
+        grid-row: 3 / span 2;
+      }
+      .grid20 {
+        grid-column: 1;
+        grid-row: 3 / span 2;
+      }
+      .grid8 {
+        grid-column: 4;
+        grid-row: 3;
+      }
+      .grid7 {
+        grid-column: 2;
+        grid-row: 5;
+      }
+      .grid14 {
+        grid-column: 2;
+        grid-row: 4;
+      }
+      .grid15 {
+        grid-column: 3;
+        grid-row: 4;
+      }
+      .grid19 {
+        grid-column: 4;
+        grid-row: 4;
+      }
+      .grid18 {
+        grid-column: 4;
+        grid-row: 5 / span 2;
+      }
+      .grid17 {
+        grid-column: 3;
+        grid-row: 6;
+      }
+      .grid13 {
+        grid-column: 4;
+        grid-row: 6;
+      }
+      .grid12 {
+        grid-column: 1;
+        grid-row: 5;
+      }
+      .grid16 {
+        grid-column: 3;
+        grid-row: 5;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Grid Layout and Responsive</h1>
+
+    <div class="grid-container">
+      <div class="grid1">
+        <img src="../image/whale-1.png" alt="whale 0" />
+      </div>
+
+      <div class="grid2">
+        <img src="../image/whale-2.png" alt="whale 1" />
+      </div>
+
+      <div class="grid3">
+        <img src="../image/whale-3.png" alt="whale 2" />
+      </div>
+
+      <div class="grid4">
+        <img src="../image/whale-0.png" alt="whale  3" />
+      </div>
+
+      <div class="grid5">
+        <img src="../image/whale-5.png" alt="whale 4" />
+      </div>
+
+      <div class="grid6">
+        <img src="../image/whale-6.png" alt="whale 5" />
+      </div>
+
+      <div class="grid7">
+        <img src="../image/whale-4.png" alt="whale 6" />
+      </div>
+
+      <div class="grid8">
+        <img src="../image/whale-7.png" alt="whale 7" />
+      </div>
+
+      <div class="grid9">
+        <img src="../image/whale-9.png" alt="whale 9" />
+      </div>
+
+      <div class="grid10">
+        <img src="../image/whale-10.png" alt="whale 10" />
+      </div>
+
+      <div class="grid11">
+        <img src="../image/whale-11.png" alt="whale 11" />
+      </div>
+
+      <div class="grid12">
+        <img src="../image/whale-12.png" alt="whale12" />
+      </div>
+
+      <div class="grid13">
+        <img src="../image/whale-13.png" alt="whale 13" />
+      </div>
+
+      <div class="grid14">
+        <img src="../image/whale-14.png" alt="whale 14" />
+      </div>
+
+      <div class="grid15">
+        <img src="../image/whale-15.png" alt="whale 15" />
+      </div>
+
+      <div class="grid16">
+        <img src="../image/whale-16.png" alt="whale 16" />
+      </div>
+
+      <div class="grid17">
+        <img src="../image/whale-17.png" alt="whale 17" />
+      </div>
+
+      <div class="grid18">
+        <img src="../image/whale-18.png" alt="whale 18" />
+      </div>
+
+      <div class="grid19">
+        <img src="../image/whale-19.png" alt="whale 19" />
+      </div>
+
+      <div class="grid20">
+        <img src="../image/whale-20.png" alt="whale 20" />
+      </div>
+    </div>
+  </body>
+</html>
